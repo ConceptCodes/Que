@@ -5,9 +5,9 @@ import uuid
 #can be a dict theme to distinguish them
 
 themes = {
-    'poptag': { ['264653','2A9D8F','E9C46A','F4A261','E76F51'] },
-    'speed': { ['E63946','F1FAEE','A8DADC','457B9D','1D3557'] },
-    'overlay': { ['FF99C8','FCF6BD','D0F4DE','A9DEF9','E4C1F9']}
+    'poptag': ['264653','2A9D8F','E9C46A','F4A261','E76F51'] ,
+    'speed': ['E63946','F1FAEE','A8DADC','457B9D','1D3557'] ,
+    'overlay': ['FF99C8','FCF6BD','D0F4DE','A9DEF9','E4C1F9']
 }
 
 class QueCard():
@@ -46,3 +46,6 @@ class QueCard():
             'duration': self.duration,
             'meta': self.meta
         }
+
+    def _render(self):
+        pass

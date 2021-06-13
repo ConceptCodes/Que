@@ -1,11 +1,10 @@
 import os
 import argparse 
+from base_card import QueCard
 
 
 def que_card(type, duration: int, meta: dict):
-    print('type', type)
-    print('duration'. duration)
-    print('meta', meta)
+    return QueCard(type, duration, meta)
 
 output_path= os.path.join(os.getcwd(),'que-cards')
 

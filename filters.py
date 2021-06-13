@@ -16,5 +16,10 @@ class Amaterasu(self):
     def _speed(self, amt=1.0):
         pass
 
+    def _blur(self, region):
+        #apply a gaussian blur to the region in frame,
+        # should work for faces, license plates, etc
+        pass
+
     def _background_audio(self, audio):
         pass
