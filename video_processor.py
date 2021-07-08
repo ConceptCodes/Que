@@ -13,7 +13,7 @@ class Chidori(self):
         return self.video
 
     def _get_audio(self):
-        path = self.output_path+'/dialouge.mp3'
+        path = self.output_path+'/dialogue.wav'
         mp.audio.write_audiofile(path)
         print('Audio file saved to {}'.format(path))
 
