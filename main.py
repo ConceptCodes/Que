@@ -11,11 +11,6 @@ def str2bool(v):
     else:
         raise argparse.ArgumentTypeError('Boolean value expected.')
 
-def blur():
-    pass
-
-
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(prog='main.py', usage='%(prog)s', description='', epilog='')
 

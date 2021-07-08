@@ -40,3 +40,5 @@ class Mangekyo():
         # will use timestamped hotword detection, and will replace with sound, beep by default
         # i have beeps from 1 - 10s, so words adjacent will have different beep based on length
         pass
+
+    

@@ -5,9 +5,9 @@ class Susanoo():
     def __init__(self, video):
         self.frames = video
         self.scenes = {}
-        self.yolo_weights = './ml/yolo/yolov3.weights'
-        self.yolo_cfg = './ml/yolo/yolov3.cfg'
-        self.yolo_labels = './ml/yolo/coco.names'
+        self.yolo['weights'] = './ml/yolo/yolov3.weights'
+        self.yolo['cfg'] = './ml/yolo/yolov3.cfg'
+        self.yolo['labels'] = './ml/yolo/coco.names'
 
     def _detect_faces(self):
         tmp=[]
@@ -17,8 +17,8 @@ class Susanoo():
 
     def _detect_que_card(self):
         # the goal is to find que card's
-        # timestamp there location
-        # populate scene object -> {poptag: (start,stop) }
+        # timestamp its location
+        # return list of cards
         pass
 
 
