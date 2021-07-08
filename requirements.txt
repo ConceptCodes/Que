@@ -1,0 +1,9 @@
+PIL
+uuid
+cvlib
+drawSvg
+moviepy
+argparse
+opencv-python
+profanity-check
+google_images_download

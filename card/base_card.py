@@ -32,8 +32,8 @@ class QueCard():
         # a square with slanted rectangle accents
         clip = draw.Rectangle(15, 260, 958, 92, fill="#302E39")
         start_x = 275
-        for col,index in enumeration(current_theme['col']):
-            clip.append(draw.Rect(start_x+(index*169), 259, 169, 92), fill=col)
+        for color,index in enumeration(current_theme['col']):
+            clip.append(draw.Rect(start_x+(index*169), 259, 169, 92), fill=color)
         return clip
 
     def _draw_bracket(self):
