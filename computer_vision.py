@@ -27,6 +27,5 @@ class Susanoo():
         yolo = YOLO(self.yolo_weights_path, self.yolo_cfg, self.yolo_labels)
         for img in self.frames:
             bbox, label, conf = yolo.detect_objects(img)
-            tmp.append((bbox, label, conf))
-            #yolo.draw_bbox(img, bbox, label, conf)
+            tmp.append((label, bbox))
         return tmp

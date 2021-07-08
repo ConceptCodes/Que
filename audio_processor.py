@@ -5,8 +5,10 @@ class Mangekyo():
         self.script = self._transcribe(speech)
 
     def _transcribe(self, master_audio):
+        fragments = []
         client = speech.SpeechClient()
         audio = speech.RecognitionAudio(uri=master_audio)
+
         config = speech.RecognitionConfig(
             encoding=speech.RecognitionConfig.AudioEncoding.FLAC,
             sample_rate_hertz=16000,
@@ -23,17 +25,14 @@ class Mangekyo():
 
         for result in result.results:
             alternative = result.alternatives[0]
-            print("Transcript: {}".format(alternative.transcript))
-            print("Confidence: {}".format(alternative.confidence))
 
             for word_info in alternative.words:
                 word = word_info.word
                 start_time = word_info.start_time
                 end_time = word_info.end_time
-
-                print(
-                    f"Word: {word}, start_time: {start_time.total_seconds()}, end_time: {end_time.total_seconds()}"
-                )
+                fragments.append({ word: (start_time, end_time) })
+        
+        return fragments
         
     def _censor(self, word_list=True, sound=""):
         # if word list, use that
